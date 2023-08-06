@@ -21,17 +21,25 @@ var List elementList
 
 func main() {
 		// Create individual element instances
-	element1 := element{"repo1", "Title 1", "Description 1", "image1.jpg"}
-	element2 := element{"repo2", "Title 2", "Description 2", "image2.jpg"}
-	element3 := element{"repo3", "Title 3", "Description 3", "image3.jpg"}
+	element1 := element{"repo1", "Portfolio", "Description 1", "Astro"}
+	element2 := element{"repo2", "Image Finder", "Description 2", "Go"}
+	element3 := element{"repo3", "User Finder", "Description 3", "Go"}
+	element4 := element{"repo3", "Title 3", "Description 3", "Next"}
 
 	// Create an elementList instance and add elements to it
 	List = elementList{}
 	List.List = append(List.List, element1)
 	List.List = append(List.List, element2)
 	List.List = append(List.List, element3)
+	List.List = append(List.List, element4)
   r := gin.Default()
-  r.GET("/ping", func(c *gin.Context) {
+
+  r.Use(func(c *gin.Context) {
+	c.Header("Access-Control-Allow-Origin", "*")
+	c.Header("Access-Control-Allow-Methods", "GET")
+})
+
+  r.GET("/", func(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
       "message": List,
     })

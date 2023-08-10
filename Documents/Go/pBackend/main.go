@@ -22,11 +22,8 @@ var List elementList
 func main() {
 		// Create individual element instances
 	element1 := element{"https://github.com/CHenrique97/chenrique97.github.io", "Portfolio", "This is my re-re-re-made portfolio, where I showcase the projects that I consider are my best work", "Astro"}
-	element2 := element{"https://github.com/CHenrique97/ImageFinder", "Image Finder","This is a microservice that uses gRPC to comunicate with the bff of a pet-project of a friend of mine. It is responsible for finding the profile pic of the users registered in our databank, thus the name
-	3", "Go"}, "Go"}
-	element3 := element{"https://github.com/CHenrique97/UserFinder", "User Finder", 
-	"This is a microservice that uses gRPC to comunicate with the bff of a pet-project of a friend of mine. It is responsible for finding the Users registered in our databank, thus the name
-	 3", "Go"}
+	element2 := element{"https://github.com/CHenrique97/ImageFinder", "Image Finder","This is a microservice that uses gRPC to comunicate with the bff of a pet-project of a friend of mine. It is responsible for finding the profile pic of the users registered in our databank, thus the name", "Go"}
+	element3 := element{"https://github.com/CHenrique97/UserFinder", "User Finder","This is a microservice that uses gRPC to comunicate with the bff of a pet-project of a friend of mine. It is responsible for finding the Users registered in our databank, thus the name", "Go"}
 	element4 := element{"https://github.com/CHenrique97/firula", "Firula", "This is a service that facilitates the renting of courts and fields for group games,made using next, still WIP", "Next"}
 
 	// Create an elementList instance and add elements to it
